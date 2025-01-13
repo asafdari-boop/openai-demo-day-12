@@ -205,7 +205,7 @@ def index():
         # Add current prompt at the end
         messages.append({
             "role": "user",
-            "content": user_prompt + "\nPlease return only raw code without any formatting No docstrings, just raw code. The requests will require you to either write bash scripts or python scripts. You need to decide the better way to write the script. You are operating on a MacOS for any bash scripts you write."
+            "content": user_prompt + "\nPlease return only raw code without any formatting No docstrings, just raw code. The requests will require you to either write bash scripts or python script or both. You need to decide the better way to write the script. Complete all commands you are given by the user in the script you write, do not skip any instructions. You are operating on a MacOS for any bash scripts you write. Don't import libraries in any Python scripts you write!"
         })
 
         # Generate code using the API
